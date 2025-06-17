@@ -1,16 +1,16 @@
 import pyautogui
-import keyboard
+from time import sleep
 
-#Poses for seeds buttons: (630, 430), (630, 560)
+#Poses for seeds buttons: (625, 435), (625, 565) 23 fruits
 #Can buy colours, (29, 179, 29)
 
-print(pyautogui.size())
+pyautogui.moveTo(625, 435)
 
-def get_values():
 
-    pos = pyautogui.position()
-    print(pos, pyautogui.pixel(pos[0], pos[1]))
+sleep(5)
+pos = (630, 435)
+offset = 9
 
-keyboard.add_hotkey("q", get_values)
+for times in range(23):
 
-keyboard.wait("esc")
+    pyautogui.moveTo(pos[0], pos[1] + (offset * times))
