@@ -7,7 +7,7 @@ from functions import utils
 
 def main():
     sleep(5)
-    pos = (630, 450)
+    pos = (625, 435)
 
     utils.cycle_shop(pos, 23)
 
